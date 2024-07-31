@@ -24,6 +24,7 @@ router.get('/:id', async function(req, res, next) {
 
 router.post('/', async function(req, res, next) {
     const data = req.body;
+    
     const todo = await addTodo(data);
     res.status(201).json({message: 'New to do created successfully!', data: todo});
 });

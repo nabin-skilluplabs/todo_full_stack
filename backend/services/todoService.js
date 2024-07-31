@@ -9,7 +9,7 @@ export async function addTodo(data) {
     });
 }
 
-export async function getAllTodos(offset = 0, limit = 1) {
+export async function getAllTodos(offset = 0, limit = 100) {
     return await prisma.toDo.findMany({
         skip: parseInt(offset),
         take: parseInt(limit)
