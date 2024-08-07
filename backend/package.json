@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node --watch ./bin/www"
+    "dev": "node --watch ./bin/www",
+    "start": "node ./bin/www",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
